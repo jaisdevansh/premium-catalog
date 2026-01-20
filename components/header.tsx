@@ -124,35 +124,35 @@ export default function Header() {
         </div>
       </div>
 
-      {/* MOBILE MENU OVERLAY */}
+      {/* MOBILE MENU DROPDOWN */}
       <div
         className={`
-          fixed top-16 left-0 right-0 bottom-0 z-40
+          absolute top-16 right-4 z-40 w-64
+          rounded-2xl border border-slate-800 shadow-2xl
           bg-slate-950
-          flex flex-col items-center justify-start pt-10 gap-8
-          transition-all duration-500 ease-in-out
+          flex flex-col items-start justify-start p-6 gap-6
+          transition-all duration-300 ease-in-out origin-top-right
           md:hidden
-          ${isMobileMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"}
+          ${isMobileMenuOpen ? "opacity-100 scale-100 translate-y-0" : "opacity-0 scale-95 -translate-y-4 pointer-events-none"}
         `}
       >
-        <nav className="flex flex-col items-center gap-8 text-xl font-medium">
+        <nav className="flex flex-col items-start gap-4 w-full">
           {[
             { name: "Home", href: "/" },
             { name: "About", href: "/about" },
             { name: "Services", href: "/services" },
             { name: "Contact", href: "/contact" },
-          ].map((item, i) => (
+          ].map((item) => (
             <Link
               key={item.name}
               href={item.href}
               onClick={() => setIsMobileMenuOpen(false)}
-              style={{ transitionDelay: `${i * 100}ms` }}
-              className={`
-                relative px-4 py-2
-                text-foreground/80 hover:text-sky-400
-                transition-all duration-300
-                ${isMobileMenuOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}
-              `}
+              className="
+                w-full text-left text-base font-medium
+                text-slate-300 hover:text-white
+                transition-colors
+                border-b border-slate-800/50 pb-2 last:border-0 last:pb-0
+              "
             >
               {item.name}
             </Link>
@@ -163,15 +163,14 @@ export default function Header() {
         <Link
           href="/login"
           onClick={() => setIsMobileMenuOpen(false)}
-          className={`
-            px-8 py-3 rounded-xl text-lg font-semibold
+          className="
+            w-full text-center py-2.5 rounded-xl text-sm font-semibold
             bg-gradient-to-r from-sky-500 to-cyan-500
             text-white
             shadow-lg
-            transition-all duration-500 delay-300
-            hover:scale-105
-            ${isMobileMenuOpen ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"}
-          `}
+            transition-all duration-300
+            hover:scale-105 active:scale-95
+          "
         >
           Admin Login
         </Link>
