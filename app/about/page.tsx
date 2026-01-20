@@ -14,7 +14,7 @@ import {
 
 export default function AboutPage() {
   return (
-    <div className="relative min-h-screen text-white">
+    <div className="relative min-h-screen overflow-x-hidden text-white">
       <Header />
 
       {/* GLOBAL BACKGROUND (same as Services & Contact) */}

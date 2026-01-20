@@ -14,7 +14,7 @@ import { storeConfig } from "@/lib/store-config"
 
 export default function ContactPage() {
   return (
-    <div className="relative min-h-screen text-white">
+    <div className="relative min-h-screen overflow-x-hidden text-white">
       <Header />
 
       {/* SAME GLOBAL BACKGROUND AS SERVICES */}

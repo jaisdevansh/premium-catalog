@@ -45,7 +45,7 @@ export default function HomePage() {
   }, [])
 
   return (
-    <div className="min-h-screen text-foreground bg-gradient-to-b from-slate-950 via-slate-900 to-[#020617]">
+    <div className="min-h-screen overflow-x-hidden text-foreground bg-gradient-to-b from-slate-950 via-slate-900 to-[#020617]">
       {/* HEADER */}
       <Header />
 

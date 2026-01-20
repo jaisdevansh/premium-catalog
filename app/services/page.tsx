@@ -58,7 +58,7 @@ const services = [
 
 export default function ServicesPage() {
   return (
-    <div className="relative min-h-screen text-white">
+    <div className="relative min-h-screen overflow-x-hidden text-white">
       <Header />
 
       {/* GLOBAL BACKGROUND – NO BOX */}
