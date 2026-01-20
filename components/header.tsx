@@ -19,7 +19,7 @@ export default function Header() {
         backdrop-blur-xl
         ${isScrolled
           ? "bg-background/95 border-b border-border shadow-lg"
-          : "bg-linear-to-b from-background/80 to-background/60"
+          : "bg-gradient-to-b from-background/80 to-background/60"
         }
       `}
     >
@@ -33,7 +33,7 @@ export default function Header() {
           <div
             className="
               w-10 h-10 rounded-xl
-              bg-linear-to-br from-sky-400 to-cyan-500
+              bg-gradient-to-br from-sky-400 to-cyan-500
               text-white font-bold flex items-center justify-center
               shadow-md
               transition-all duration-300
@@ -71,7 +71,7 @@ export default function Header() {
                 transition-all duration-300
                 hover:text-sky-500
                 after:absolute after:-bottom-1 after:left-1/2
-                after:h-[2px] after:w-0 after:bg-linear-to-r after:from-sky-400 after:to-cyan-500
+                after:h-[2px] after:w-0 after:bg-gradient-to-r after:from-sky-400 after:to-cyan-500
                 after:transition-all after:duration-300
                 hover:after:w-full hover:after:left-0
               "
@@ -87,7 +87,7 @@ export default function Header() {
           className="
             cursor-pointer
             rounded-xl px-5 py-2 text-sm font-semibold
-            bg-linear-to-r from-sky-500 to-cyan-500
+            bg-gradient-to-r from-sky-500 to-cyan-500
             text-white
             shadow-md
             transition-all duration-300

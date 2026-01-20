@@ -77,7 +77,7 @@ export default function ProductList({
                   <div className="
                     absolute top-3 left-3
                     px-3 py-1 rounded-full text-xs font-semibold
-                    bg-linear-to-r from-emerald-500 to-lime-400
+                    bg-gradient-to-r from-emerald-500 to-lime-400
                     text-black shadow
                   ">
                     ₹ {p.price}

@@ -3,6 +3,7 @@
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import Link from "next/link"
+import { storeConfig } from "@/lib/store-config"
 import {
   ShieldCheck,
   Droplets,
@@ -155,7 +156,7 @@ export default function AboutPage() {
         </section>
 
         {/* CTA */}
-        <section className="relative rounded-3xl p-12 bg-linear-to-r from-emerald-500/20 to-cyan-500/20 border border-white/10 text-center">
+        <section className="relative rounded-3xl p-12 bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 border border-white/10 text-center">
           <h2 className="text-3xl font-bold mb-4">
             Need Help or Want to Order?
           </h2>
@@ -164,7 +165,7 @@ export default function AboutPage() {
           </p>
 
           <Link
-            href="https://wa.me/919335365885"
+            href={`https://wa.me/${storeConfig.whatsappNumber}`}
             target="_blank"
             className="inline-flex items-center gap-2 px-7 py-3 rounded-xl bg-emerald-500 text-black font-bold hover:bg-emerald-600 transition"
           >

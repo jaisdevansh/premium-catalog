@@ -2,6 +2,7 @@
 
 import Image from "next/image"
 import { MessageCircle } from "lucide-react"
+import { storeConfig } from "@/lib/store-config"
 
 type Product = {
   id: string
@@ -47,7 +48,7 @@ export default function ProductCard({ product, onProductClick }: Props) {
         <div
           className="
             absolute inset-0
-            bg-linear-to-t from-black/40 via-transparent to-transparent
+            bg-gradient-to-t from-black/40 via-transparent to-transparent
             opacity-0 group-hover:opacity-100
             transition-opacity duration-300
           "
@@ -91,7 +92,7 @@ export default function ProductCard({ product, onProductClick }: Props) {
             onClick={(e) => {
               e.stopPropagation()
               window.open(
-                `https://wa.me/91XXXXXXXXXX?text=I want to order ${encodeURIComponent(
+                `https://wa.me/${storeConfig.whatsappNumber}?text=I want to order ${encodeURIComponent(
                   product.name
                 )}`,
                 "_blank"

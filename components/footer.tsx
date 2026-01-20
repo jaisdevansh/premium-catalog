@@ -8,11 +8,11 @@ export default function Footer() {
     <footer
       className="
         relative overflow-hidden text-slate-200
-        bg-linear-to-br from-slate-950 via-slate-900 to-[#020617]
+        bg-gradient-to-br from-slate-950 via-slate-900 to-[#020617]
       "
     >
       {/* hero → footer blend */}
-      <div className="absolute top-0 left-0 right-0 h-24 bg-linear-to-b from-transparent to-slate-950 pointer-events-none" />
+      <div className="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-slate-950 pointer-events-none" />
 
       {/* ambient glow (same palette as hero) */}
       <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[300px] bg-sky-500/10 blur-3xl pointer-events-none" />
@@ -114,7 +114,7 @@ export default function Footer() {
             </p>
 
             <a
-              href="https://wa.me/919335365885"
+              href={`https://wa.me/${storeConfig.whatsappNumber}`}
               target="_blank"
               className="
                 inline-flex items-center gap-3 px-5 py-3 rounded-xl

@@ -1,6 +1,7 @@
 "use client"
 
 import Image from "next/image"
+import { storeConfig } from "@/lib/store-config"
 import type { Product } from "./product-grid"
 import { X, MessageCircle, Star, Package, Truck } from "lucide-react"
 
@@ -98,7 +99,7 @@ export default function ProductModal({
             {/* ACTIONS */}
             <div className="mt-auto flex gap-3">
               <a
-                href={`https://wa.me/91XXXXXXXXXX?text=I want to order ${encodeURIComponent(
+                href={`https://wa.me/${storeConfig.whatsappNumber}?text=I want to order ${encodeURIComponent(
                   product.name
                 )}`}
                 target="_blank"

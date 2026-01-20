@@ -5,7 +5,7 @@ export const storeConfig = {
   shopTagline: "Premium Sanitary & Bathroom Solutions",
   shopDescription:
     "Discover our exclusive collection of premium sanitary ware and bathroom fixtures designed for modern comfort and elegance. Quality, durability, and style in every product.",
-  whatsappNumber: "919876543210", // country code + number (no +, no spaces)
+  whatsappNumber: "919335365885", // country code + number (no +, no spaces)
 }
 
 /**

@@ -13,7 +13,7 @@ export default function Hero() {
   return (
     <section className="relative overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-linear-to-br from-slate-950 via-slate-900 to-slate-950" />
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950" />
 
       {/* Accent glows */}
       <div className="absolute -top-32 -left-32 w-96 h-96 bg-sky-500/20 rounded-full blur-3xl" />
@@ -27,7 +27,7 @@ export default function Hero() {
             }`}
         >
           {/* signature accent */}
-          <span className="absolute -left-6 top-2 h-16 w-1 bg-linear-to-b from-sky-400 to-cyan-400 rounded-full" />
+          <span className="absolute -left-6 top-2 h-16 w-1 bg-gradient-to-b from-sky-400 to-cyan-400 rounded-full" />
 
           <p className="text-sm font-semibold tracking-widest text-sky-400 uppercase mb-4">
             Premium Bathroom Solutions
@@ -56,7 +56,7 @@ export default function Hero() {
               href="#products"
               className="
                 px-6 py-3 rounded-xl
-                bg-linear-to-r from-sky-500 to-cyan-500
+                bg-gradient-to-r from-sky-500 to-cyan-500
                 text-white font-semibold
                 shadow-lg
                 transition-all duration-300
@@ -68,7 +68,7 @@ export default function Hero() {
             </a>
 
             <a
-              href="https://wa.me/919335365885"
+              href={`https://wa.me/${storeConfig.whatsappNumber}`}
               target="_blank"
               className="
                 px-6 py-3 rounded-xl

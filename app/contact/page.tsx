@@ -10,6 +10,7 @@ import {
   ShieldCheck,
   User,
 } from "lucide-react"
+import { storeConfig } from "@/lib/store-config"
 
 export default function ContactPage() {
   return (
@@ -62,7 +63,7 @@ export default function ContactPage() {
               </p>
 
               <a
-                href="https://wa.me/919335365885?text=Hello, I want to enquire about bathroom sanitary and waterproof products."
+                href={`https://wa.me/${storeConfig.whatsappNumber}?text=Hello, I want to enquire about bathroom sanitary and waterproof products.`}
                 target="_blank"
                 className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-emerald-500 text-black font-bold hover:bg-emerald-600 transition"
               >

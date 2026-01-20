@@ -215,7 +215,7 @@ export default function ProductForm() {
         <button
           onClick={submit}
           disabled={submitting}
-          className="w-full py-4 rounded-2xl bg-linear-to-r from-emerald-500 to-lime-400 text-black font-extrabold tracking-wide hover:scale-[1.02] hover:shadow-xl transition active:scale-95"
+          className="w-full py-4 rounded-2xl bg-gradient-to-r from-emerald-500 to-lime-400 text-black font-extrabold tracking-wide hover:scale-[1.02] hover:shadow-xl transition active:scale-95"
         >
           {submitting ? "Publishing…" : "Publish Product"}
         </button>

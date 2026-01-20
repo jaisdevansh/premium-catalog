@@ -25,7 +25,7 @@ export default function AdminLoginPage() {
 
       {/* LEFT – BRAND / AURA */}
       <div className="relative hidden lg:flex flex-col justify-center px-20 overflow-hidden">
-        <div className="absolute inset-0 bg-linear-to-br from-slate-950 via-slate-900 to-[#020617]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-[#020617]" />
         <div className="absolute -top-40 -left-40 w-[600px] h-[600px] bg-sky-500/10 blur-[120px]" />
         <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-cyan-500/10 blur-[100px]" />
 
@@ -108,7 +108,7 @@ export default function AdminLoginPage() {
             className="
               w-full flex items-center justify-center gap-2
               py-3 rounded-xl font-semibold
-              bg-linear-to-r from-sky-500 to-cyan-500
+              bg-gradient-to-r from-sky-500 to-cyan-500
               hover:scale-[1.03] active:scale-95
               transition-all
             "
