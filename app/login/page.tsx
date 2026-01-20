@@ -24,7 +24,7 @@ export default function AdminLoginPage() {
     <main className="min-h-screen grid lg:grid-cols-2 bg-[#020617] text-slate-200">
 
       {/* LEFT – BRAND / AURA */}
-      <div className="relative hidden lg:flex flex-col justify-center px-20 overflow-hidden">
+      <div className="relative flex flex-col justify-center px-6 py-12 lg:px-20 lg:py-0 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-[#020617]" />
         <div className="absolute -top-40 -left-40 w-[600px] h-[600px] bg-sky-500/10 blur-[120px]" />
         <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-cyan-500/10 blur-[100px]" />
