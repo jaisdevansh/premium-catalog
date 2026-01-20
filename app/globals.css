@@ -1,0 +1,197 @@
+@import "tailwindcss";
+
+/* =========================
+   COLOR SYSTEM (SANITARY SAFE)
+========================= */
+:root {
+  /* Backgrounds (clean & bright) */
+  --background: 248 250 252;
+  /* light clean grey */
+  --foreground: 15 23 42;
+  /* dark slate */
+
+  --surface-1: 255 255 255;
+  /* cards */
+  --surface-2: 241 245 249;
+  /* inputs */
+  --surface-3: 226 232 240;
+
+  --border: 226 232 240;
+  --muted: 100 116 139;
+
+  /* Brand (sanitary focused) */
+  --primary: 14 165 233;
+  /* water blue */
+  --secondary: 34 197 94;
+  /* hygiene green */
+  --accent: 15 118 110;
+  /* teal */
+
+  --radius: 12px;
+}
+
+.dark {
+  /* Soft dark (NOT black) */
+  --background: 17 24 39;
+  --foreground: 241 245 249;
+
+  --surface-1: 30 41 59;
+  --surface-2: 51 65 85;
+  --surface-3: 71 85 105;
+
+  --border: 71 85 105;
+  --muted: 148 163 184;
+
+  --primary: 56 189 248;
+  /* lighter blue */
+  --secondary: 74 222 128;
+  /* fresh green */
+  --accent: 45 212 191;
+}
+
+/* =========================
+   BASE
+========================= */
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: rgb(var(--background));
+    color: rgb(var(--foreground));
+    font-family: system-ui, -apple-system, BlinkMacSystemFont,
+      "Segoe UI", Roboto, Ubuntu, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* IMPORTANT UX FIX */
+  button {
+    cursor: pointer;
+  }
+}
+
+/* =========================
+   UTILITIES (NO @apply – SAFE)
+========================= */
+@layer utilities {
+  .admin-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: var(--radius);
+    background-color: rgb(var(--surface-2));
+    border: 1px solid rgb(var(--border));
+    color: rgb(var(--foreground));
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .admin-input::placeholder {
+    color: rgb(var(--muted));
+  }
+
+  .admin-input:focus {
+    border-color: rgb(var(--primary));
+    box-shadow: 0 0 0 2px rgb(var(--primary) / 0.25);
+  }
+
+  .admin-card {
+    background-color: rgb(var(--surface-1));
+    border: 1px solid rgb(var(--border));
+    border-radius: 1rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  }
+
+  /* buttons */
+  .btn-primary {
+    background-color: rgb(var(--primary));
+    color: white;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+  }
+
+  .btn-primary:hover {
+    background-color: rgb(var(--primary) / 0.9);
+  }
+}
+
+/* =========================
+   ANIMATIONS (SUBTLE)
+========================= */
+@layer utilities {
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(14px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.45s ease-out forwards;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @layer base {
+
+    a,
+    button {
+      cursor: pointer;
+    }
+  }
+
+  @layer utilities {
+    .fade-up {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.8s ease forwards;
+    }
+
+    .fade-down {
+      opacity: 0;
+      transform: translateY(-20px);
+      animation: fadeDown 0.8s ease forwards;
+    }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeDown {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+
+  @layer utilities {
+    .stagger-item {
+      opacity: 0;
+      transform: translateY(24px) scale(0.98);
+      animation: staggerFadeUp 0.6s ease forwards;
+    }
+
+    @keyframes staggerFadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+  }
+
+}
