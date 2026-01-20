@@ -127,11 +127,12 @@ export default function Header() {
       {/* MOBILE MENU OVERLAY */}
       <div
         className={`
-          fixed inset-0 z-40 bg-background/98 backdrop-blur-3xl
-          flex flex-col items-center justify-center gap-8
+          fixed top-16 left-0 right-0 bottom-0 z-40
+          bg-slate-950
+          flex flex-col items-center justify-start pt-10 gap-8
           transition-all duration-500 ease-in-out
           md:hidden
-          ${isMobileMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-full pointer-events-none"}
+          ${isMobileMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"}
         `}
       >
         <nav className="flex flex-col items-center gap-8 text-xl font-medium">
